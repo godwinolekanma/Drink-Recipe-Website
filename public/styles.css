@@ -1,0 +1,193 @@
+body{
+    background-color: antiquewhite;
+    /* font-family: "Noto Serif HK", serif; */
+    font-family: "Instrument Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+main{
+    display: flex;
+    margin: 20px 20px 20px 20px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 40px;
+    width: 80%
+}
+
+.grid-itemone{
+    background-image: url("images/drink2.jpg"); 
+    height: 600px;
+    width: 50%;
+    background-size: 100% 100%;
+    border: 0;
+    border-radius: 10px; 
+    max-width: 500px;
+}
+
+.grid-itemtwo{
+    max-width: 500px;
+    width: 50%;
+}
+
+
+.grid-itemtwo > p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: rgb(96, 98, 97);
+    line-height: 24px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    background: url(./images/woodbg.jpg);
+    background-size: 100% 100%;
+    object-fit: cover;
+    height: 300px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.flex-item{
+    max-width: 200px;
+    /* border: 4px solid gray; */
+    border-style: solid;
+    border-width: 0 6px;
+    border-color: black;
+    transform: skew(-10deg);
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.image-container{
+    height: 100%;
+    width: 135%;
+    transform: skew(10deg);
+    position: relative;
+    left: -35px;
+    object-fit: cover;
+}
+
+.third{
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+    align-items: center;
+    justify-content: center;
+    transform: skew(0deg);
+    flex-grow: 1;
+    padding: 0px 20px;
+}
+
+h1{
+    text-align: center;
+    margin: 8px 0;
+    line-height: 55px;
+    font-size: 4rem;;
+}
+
+h2{
+    font-size: 3rem;
+    /* text-align: center; */
+    color: #4CAF50;
+    padding: 0;
+    margin: 0;
+    /* text-align: center; */
+}
+
+  input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  button{
+    border: 0;
+    width: 300px;
+    height: 100px;
+  }
+
+
+  footer{
+    background-color: #4CAF50;
+    height: 200px;
+  }
+
+@media screen and (max-width: 865px){
+
+    .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .third{
+        min-width: 200px;
+
+    }
+
+    .grid-itemone{
+        height: 500px;
+        width: 100%;
+    }
+    
+    .grid-itemtwo{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 2.5rem;
+        text-align: center; 
+    } 
+
+    h1{
+        line-height: 35px;
+        font-size: 2rem;;
+    }
+    
+    .flex-item{
+        max-width: 100px;
+    }
+    .image-container{
+        width: 165%;
+    }
+}
+
+
+@media screen and (max-width: 510px){
+    .grid-itemone{
+        width: 100%;
+    }
+    .grid-itemtwo{
+        width: 100%;
+    }
+}

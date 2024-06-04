@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Maker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="images/cocktail1.jpg" class="image-container" alt="">
+            </div>
+            <div class="flex-item">
+                <img src="images/cocktail2.jpg" class="image-container" alt="">
+            </div>
+            <div class="third">
+        
+                <h1>Drink Recipe Finder</h1>
+                <!-- <button>Geneare Random Drink</button> -->
+                <form action="/search" method="get">
+                    <input type="text" name="search" placeholder="Search Drink">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="flex-item">
+                <img src="images/marg1.jpg" class="image-container" alt="">
+            </div>
+            <div class="flex-item">
+                <img src="images/marg2.jpg" class="image-container" alt="">
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="grid-itemone"></div>
+            <div class="grid-itemtwo">
+                <h2>Want A Random Drink?</h2>
+                <p>Welcome to our Random Drink Generator, your go-to destination 
+                    for discovering exciting new beverages! 
+                    Whether you're hosting a party, 
+                    looking to try something new, or just in the mood for a surprise, 
+                    our generator offers a wide variety of drinks to 
+                    suit any occasion. With just a click, you'll be introduced to a refreshing cocktail, a unique mocktail, or an exotic brew.
+                     Explore endless possibilities and elevate your beverage 
+                    experience with our curated collection of recipes. Cheers to new adventures in taste!
+                </p>
+                <form action="/random" method="get">
+                    <input type="submit" value="Submit" style="width: 100px;">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
