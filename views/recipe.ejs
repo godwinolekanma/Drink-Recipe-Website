@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    
+    <div class="recipe">
+        <img class="drink-image" src="<%= recipe.image %>" alt="">
+        <div class="recipe-instructions">
+            <h2>How to Make <%= recipe.name %> (<%= recipe.alc %>)</h2>
+            <h3>Ingredients</h3>
+            <ul>
+                <% recipe.howToList.forEach((inst) => { %>
+                    <li><%= inst %></li>
+                    <% }) %>
+            </ul>
+            <h3>Steps</h3>
+            <ol>
+               
+                    <% recipe.instructionsList.forEach((inst) => { %>
+                        <li><%= inst %></li>
+                        <% }) %>
+            </ol>
+        </div>
+    </div>
+</main>
+
+<%- include("partials/footer.ejs") %>

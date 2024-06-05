@@ -6,22 +6,146 @@ body{
     padding: 0;
 }
 
-
 main{
     display: flex;
+    flex-direction: column;
     margin: 20px 20px 20px 20px;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: 25px;
 }
+
+h1{
+    text-align: center;
+    margin: 8px 0;
+    line-height: 55px;
+    font-size: 4rem;;
+}
+
+h2{
+    font-size: 3rem;
+    /* text-align: center; */
+    color: #4CAF50;
+    padding: 0;
+    margin: 0;
+
+}
+
+h3{
+    font-style: italic;
+    text-align: center;
+}
+
+
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  button{
+    border: 0;
+    width: 300px;
+    height: 100px;
+  }
+
+
+  footer{
+    background-color: #4CAF50;
+    height: 200px;
+  }
+
+  a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 1rem
+  }
+
+  a:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 50px grey;
+    border-radius: 20px;
+  }
+
+  p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: rgb(96, 98, 97);
+    line-height: 24px;
+}
+
+ul, ol{
+    margin: 0;
+}
+
+li {
+    padding: 5px 0px;
+}
+
 
 .container{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center; 
     gap: 40px;
-    width: 80%
+    width: 80%;
 }
+
+.wrap{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.recipe{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center; 
+ gap: 40px;
+ width: 100%;
+}
+
+.drink-image{
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.recipe-instructions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: x-large;
+    max-width: 600px;
+}
+
 
 .grid-itemone{
     background-image: url("images/drink2.jpg"); 
@@ -39,12 +163,7 @@ main{
 }
 
 
-.grid-itemtwo > p {
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    color: rgb(96, 98, 97);
-    line-height: 24px;
-}
+
 
 .flex-container{
     display: flex;
@@ -90,60 +209,43 @@ main{
     padding: 0px 20px;
 }
 
-h1{
-    text-align: center;
-    margin: 8px 0;
-    line-height: 55px;
-    font-size: 4rem;;
-}
-
-h2{
-    font-size: 3rem;
-    /* text-align: center; */
-    color: #4CAF50;
-    padding: 0;
-    margin: 0;
-    /* text-align: center; */
-}
-
-  input[type=text]{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 0;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #45a049;
-  }
-
-  button{
-    border: 0;
+.card{
+    height: 400px;
     width: 300px;
-    height: 100px;
-  }
-
-
-  footer{
     background-color: #4CAF50;
-    height: 200px;
-  }
+    border-radius: 20px;
+}
+
+.card-top{
+    height: 300px;
+}
+
+.card-bottom{
+    padding: 20px;
+}
+
+.card-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+
 
 @media screen and (max-width: 865px){
+
+    .recipe-instructions{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: x-large;
+        max-width: 600px;
+    }
+
+    .recipe{
+        flex-wrap: wrap;
+       }
 
     .container{
         flex-direction: column;
@@ -169,6 +271,7 @@ h2{
         text-align: center; 
     } 
 
+
     h1{
         line-height: 35px;
         font-size: 2rem;;
@@ -180,6 +283,7 @@ h2{
     .image-container{
         width: 165%;
     }
+
 }
 
 
@@ -190,4 +294,12 @@ h2{
     .grid-itemtwo{
         width: 100%;
     }
+
+    .drink-image{
+        width: 400px;
+        height: 500px;
+    }
+
+    
+    
 }

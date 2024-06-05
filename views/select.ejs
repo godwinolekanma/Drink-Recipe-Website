@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs")  %>
+
+<main>
+<h2 style="margin-bottom: 20px ;">Drinks</h2>
+<div class="container wrap">
+    <!-- <h2>Drinks</h2> -->
+    <% if(drinks === null) {%>
+        <h3 style="margin-bottom: 20px ;">Sorry No Recipes Available</h3>
+        <% } else{%>
+    <% drinks.forEach((drink) => { %>
+    <!-- look up cocktail detail by id -->
+    <a href="/drink?id=<%= drink.idDrink%>"> 
+        <div class="card">
+            <div class="card-top">
+                <img src="<%= drink.strDrinkThumb %>" class="card-image" alt="">
+            </div>
+            <div class="card-bottom">
+                <p><%= drink.strDrink %></p>
+            </div>
+        </div>
+    </a>
+    <% }) %>
+    <% } %>
+</div>
+</main>
+
+<%- include("partials/footer.ejs") %>
