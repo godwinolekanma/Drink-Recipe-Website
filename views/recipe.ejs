@@ -9,17 +9,21 @@
             <h3>Ingredients</h3>
             <ul>
                 <% recipe.howToList.forEach((inst) => { %>
-                    <li><%= inst %></li>
-                    <% }) %>
+                <li><%= inst %></li>
+                <% }) %>
             </ul>
             <h3>Steps</h3>
             <ol>
-               
-                    <% recipe.instructionsList.forEach((inst) => { %>
-                        <li><%= inst %></li>
+                <% recipe.instructionsList.forEach((inst) => { %>
+                    <li><%= inst %></li>
                         <% }) %>
             </ol>
         </div>
+    </div>
+    <div>
+        <form action="/random" method="get">
+            <input type="submit" value="Random Drink" style="width: 200px; margin-top: 50px;">
+        </form>
     </div>
 </main>
 

@@ -86,8 +86,6 @@ app.get("/drink", async(req, res) => {
             instructionsList: recipe.strInstructions.replaceAll(". ", "|").split("|"),
             howToList: Ingredients
         }
-        console.log(recipeHolder.howToList)
-        console.log(recipeHolder.instructionsList)
         res.render("recipe.ejs", {recipe: recipeHolder})
     }catch (error){
         console.log(error)
