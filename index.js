@@ -44,10 +44,9 @@ app.get("/random", async (req,res) => {
         const result = await axios.get(API_URL + "/api/json/v1/1/random.php")
         const drinkid = result.data["drinks"][0].idDrink
         res.redirect(`/drink?id=${drinkid}`)
-
-
     }catch(error){
-
+        console.error(error)
+        res.render("select.ejs", {drinks: null})
     }
     
 
