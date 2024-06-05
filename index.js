@@ -7,10 +7,17 @@ const API_URL = "http://www.thecocktaildb.com"
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
-
+app.use((req, res, next) => {
+    res.locals.currentYear = new Date().getFullYear();
+    next();
+});
 
 app.get("/", (req, res) =>{
     res.render("index.ejs")
+})
+
+app.get("/search", async(req, res) => {
+    res.redirect("/")
 })
 
 app.post("/search", async (req, res) => {
@@ -29,6 +36,8 @@ app.post("/search", async (req, res) => {
         res.render("select.ejs", {drinks: null})
     }
 })
+
+
 
 app.get("/random", async (req,res) => {
     try{
@@ -58,7 +67,7 @@ app.get("/drink", async(req, res) => {
         var ingredientHolder = []
         while(notNull){
             if (recipe[`strIngredient${count}`] != null && recipe[`strMeasure${count}`] != null){
-                ingredientHolder.push(recipe[`strMeasure${count}`] + "of " + recipe[`strIngredient${count}`])
+                ingredientHolder.push(recipe[`strMeasure${count}`] + recipe[`strIngredient${count}`])
             } else{
                 notNull = false
             }
